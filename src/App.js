@@ -1,9 +1,12 @@
 import React from "react";
 
 function App() {
+  const myStyle = {
+    backgroundColor : "white"
+  }
   return (
-    <div>
-      <h1>HI HI!</h1>
+    <div style={myStyle}>
+      <h1>hello</h1>
     </div>
   );
 }
