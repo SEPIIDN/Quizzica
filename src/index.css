@@ -1,0 +1,38 @@
+body{
+    background: url(./components/images/QuestionsPage.png) ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+*{
+    box-sizing: border-box;
+}
+.quiz--container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50vh;
+    top: 30vh;
+    color: white;
+}
+.quiz--answer-container{
+    margin-block-start: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
+    width: 100vh;
+}
+.quiz--answers{
+    background-color: #fff;
+    height: 4rem;
+    border-radius: 10px;
+    color: black;
+    font-size: larger;
+    padding: 1rem;
+}
+.quiz--question-container{
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    width: 100vh;
+    padding: 1rem;
+}
