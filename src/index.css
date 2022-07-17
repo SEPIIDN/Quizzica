@@ -1,6 +1,8 @@
 body{
-    background: url(./components/images/QuestionsPage.png) ;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: url(./components/images/QuestionsPage.png);
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
 }
 *{
     box-sizing: border-box;
@@ -9,10 +11,9 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100vh;
     align-items: center;
-    left: 50vh;
-    top: 30vh;
-    color: white;
+    justify-content: center;
 }
 .quiz--answer-container{
     margin-block-start: 2rem;
@@ -23,16 +24,76 @@ body{
 }
 .quiz--answers{
     background-color: #fff;
-    height: 4rem;
+    color: #111D4A;
+    height: 5rem;
     border-radius: 10px;
-    color: black;
     font-size: larger;
+    font-weight: 700;
     padding: 1rem;
+    cursor: pointer;
+}
+.quiz--correct-answer{
+    background-color: #A0EEC0;
+    color: #111D4A;
+    height: 5rem;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: 700;
+    padding: 1rem;
+    cursor: pointer;
+}
+.quiz--incorrect-answer{
+    background-color: #F64740;
+    color: #111D4A;
+    height: 5rem;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: 700;
+    padding: 1rem;
+    cursor: pointer;
 }
 .quiz--question-container{
     background-color: #fff;
-    color: black;
+    color: #71697A;
     border-radius: 10px;
     width: 100vh;
     padding: 1rem;
+}
+.quiz--question-container > h1{
+    cursor: default;
+}
+.quiz--loading-message{
+    position: relative;
+    top: 50vh;
+    left: 50vh;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.quiz--score{
+    color: #fff;
+    font-size: xx-large;
+    font-weight: 700;
+}
+.quiz--next{
+    position: relative;
+    left: 50vh;
+    height: 4rem;
+    width: 50vh;
+    border-radius: 10px;
+    border: none;
+    margin-block-start: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.start--start-button{
+    position: relative;
+    left: 50vh;
+    top: 50vh;
+    background-color: #fff;
+    color: #71697A;
+    border-radius: 10px;
+    width: 100vh;
+    padding: 1rem;
+    cursor: pointer;
 }
