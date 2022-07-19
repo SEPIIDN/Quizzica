@@ -7,11 +7,10 @@ const Quiz = ({
     data: { question, correct_answer, shuffledAnswers }
 }) => {
 
-    //maps through shuffled answers and creates a div for each one of them
-    const shuffledComponent = shuffledAnswers.map((answer,key) => {
+    const shuffledComponent = shuffledAnswers.map((answer, key) => {
         return (
             <div className={`${showAnswers ? correct_answer === answer ? "quiz--correct-answer" : "quiz--incorrect-answer" : "quiz--answers"}`}
-            key={key}
+                key={key}
                 onClick={() => checkAnswer(answer)}
                 dangerouslySetInnerHTML={{ __html: answer }}
             />
@@ -22,16 +21,17 @@ const Quiz = ({
         <div>
             <div className="quiz--question-container"><h1 className="quiz--question-text"
                 dangerouslySetInnerHTML={{ __html: question }}
-            /></div>
+            />
+            </div>
             <div className="quiz--answer-container">
                 {shuffledComponent}
             </div>
             {showAnswers && (
-            <button
-                className="quiz--next"
-                onClick={nextQuestion}
-            >Next Question
-            </button>
+                <button
+                    className="quiz--next"
+                    onClick={nextQuestion}
+                >Next Question
+                </button>
             )}
         </div>
     );

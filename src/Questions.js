@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import { Quiz } from "./components";
 
 function Questions() {
@@ -34,16 +34,16 @@ function Questions() {
     setCurrentQuestion(currentQuestion + 1)
   }
 
+  let navigate = useNavigate()
+
   return quizData.length > 0 ? (
     <div className="quiz--container">
       {currentQuestion >= quizData.length ? (
         <div>
           <h1 className="quiz--score">Your Score : {score}</h1>
-          <Link to="/">
-          <div className="start--start-button">
-            <h1 className="link-text">Play Again</h1>
+          <div onClick={()=>{navigate("/")}} className="start--again-button">
+            <h1><i className="zmdi zmdi-replay"></i>Play Again</h1>
           </div>
-          </Link>
         </div>
 
       ) : (
@@ -56,7 +56,7 @@ function Questions() {
       }
     </div>
   ) : (
-    <h1 className="quiz--loading-message">loading please be patient...</h1>
+    <h1 className="quiz--loading-message"><i className="zmdi zmdi-settings zmdi-hc-spin"></i></h1>
   );
 }
 

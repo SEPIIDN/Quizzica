@@ -1,14 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom"
-
+import {useNavigate} from "react-router-dom";
 function Start() {
-
+    let navigate = useNavigate()
     return (
-        <Link to="/Questions">
-        <div className="start--start-button">
-            <h1 className="link-text">Start</h1>
+        
+        <div onClick={()=>{navigate("/Questions")}} className="start--start-button">
+            <h1>Start</h1>
         </div>
-        </Link>
     )
 }
 export default Start;
